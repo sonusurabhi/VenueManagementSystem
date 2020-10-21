@@ -1,0 +1,23 @@
+{
+  "name": "anuro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.6-alpha.6",
+    "moment": "^2.24.0",
+    "mysql": "^2.17.1",
+    "nodemon": "^1.19.4",
+    "req-flash": "0.0.3",
+    "router": "^1.3.3",
+    "routes": "^2.1.0"
+  }
+}

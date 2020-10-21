@@ -1,0 +1,70 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  /  <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="/assets/css/custom.css">-->
+    <title><%= title %></title>
+</head>
+<style>
+    .table-wrapper {
+        margin-top: 50px;
+    }
+
+    .player-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .add-player-form {
+        margin-top: 50px;
+    }
+</style>
+<body style="background-color:powderblue;">
+<div class="page-wrapper">
+    <nav class="navbar navbar-light bg-light">
+        <span class="navbar-brand mb-0 h1" ><a href="/">Locus CET</a></span>
+        <a class="float-right" href="/booking" title="Bookings">Logout</a>
+    </nav>
+ </div>
+
+    <div class="container">
+        <% if (message != '') { %>
+            <p class="text-center text-danger"><%= message %></p>
+        <% } %>
+       
+
+
+           
+	
+    </div>
+
+</div>
+
+        <% if ( desc.length > 0) {%>
+          <%= desc.venuename %>
+                    <% desc.forEach((desc,index) => { %>
+                     <center><br>
+		<b><h1 style="font-family:verdana;" style="color:blue;"><%= desc.venuename %></h1><br><b>
+	  <img src="/assets/img/<%= desc.image %>" alt="" height="500" width="800">
+                      </center>
+                    <% }) %>
+
+              
+			
+        <% } %>
+    </div>Additional Facilities<br><br>
+<form  action="" method="POST">Wifi<br>Projector<br>Sound System<br>  Coffee Service<br> Air Conditioning<br>Catering<br>
+Additional Facilities<input type="text" name="faci" id="faci" placeholder="Facilities"><br><br>
+
+Event Name<input type="text" name="event" id="event" placeholder="Event Name"><br><br>
+Booking Code<input type="text" name="bookcode" id="bookcode" placeholder="Booking Code"><br><br>
+ <button type="submit" class="btn btn-primary">Book</button>
+
+</form>
+</body>
+</html>
